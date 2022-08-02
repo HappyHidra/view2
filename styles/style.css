@@ -1,0 +1,152 @@
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/*form styles*/
+#msform {
+  position: relative;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/*PROGRESS BAR*/
+.container {
+  width: 500px;
+}
+.progressbar {
+  counter-reset: step;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 150px;
+  height: 54px;
+  position: relative;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.progressbar li span {
+  color: black;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: rgb(128, 128, 128);
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 148px;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  /* color: green; */
+}
+.progressbar li.active:before {
+  background-color: #fc9904f6;
+}
+.progressbar li.active + li:after {
+  background-color: rgb(174, 184, 174);
+}
+
+#msform fieldset {
+  margin-top: 20px;
+  color: grey;
+  flex-direction: column;
+  align-items: safe center;
+  background: white;
+  border: 0 none;
+}
+/*inputs*/
+#msform input {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  margin: 0 auto 10 auto;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #88838083;
+  color: #888380;
+  font-size: 18px;
+}
+#msform label {
+  display: block;
+  text-align: left;
+  padding-bottom: 10px;
+}
+#msform .emailLabels {
+  display: flex;
+  justify-content: space-between;
+}
+#msform .emailLabels .notRequired {
+  text-align: right;
+  color: rgb(5, 126, 59);
+  width: 184px;
+  height: 12px;
+}
+#msform input {
+  padding: 15px;
+}
+
+.formFields {
+  height: 87px;
+  width: 350px;
+}
+
+/*buttons*/
+#msform .action_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  border: none;
+  background: #fc9904f6;
+  color: white;
+  width: 128px;
+  height: 40px;
+  font-size: 18px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+#msform .action_btn:hover,
+#msform .action_btn:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #ddc124;
+}

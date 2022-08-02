@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src = "scripts/index.js"></script>
+</head>
+
+<body>
+    <form id="msform">
+        <div class="container">
+            <ul class="progressbar">
+                <li id = 'firstLi' class="active"><span>Личные данные</span></li>
+                <li><span>Адрес</span></li>
+                <li><span>Данные для входа</span></li>
+            </ul>
+        </div>
+        </div>
+        <fieldset>
+            <div class="formFields"><label for=" name">Имя</label><input type="text" id="name" placeholder="Иван"></div>
+            <div class="formFields"><label for="surname">Фамилия</label><input type="text" id="surname"
+                    placeholder="Иванов"></div>
+            <div class="formFields"><label for="mobileNumber">Телефон</label><input type="email" id="mobileNumber"
+                    placeholder="+7(000)000 00 00"></div>
+            <div class="formFields">
+                <div class="emailLabels">
+                    <label for="email">E-mail</label>
+                    <label for="email" class="notRequired">необязательное</label>
+                </div>
+                <input type="email" id="email" placeholder="myname@mail.ru">
+            </div>
+        </fieldset>
+        <div class="action_btn">Дальше</div>
+    </form>
+</body>
+
+</html>
